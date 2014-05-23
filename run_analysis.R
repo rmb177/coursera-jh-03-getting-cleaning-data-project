@@ -14,31 +14,34 @@ create_data_set <- function()
 
     # Read in general data
     activity_factors <- read.table(paste(DATA_FOLDER, "activity_labels.txt", sep="/"))
-    features <- read.table(paste(DATA_FOLDER, "features.txt", sep="/"))
+    features <- read.table(paste(DATA_FOLDER, "features.txt", sep="/"))    
+    filtered_features <- features[grepl("-mean", features[,2]) | grepl("-std", features[,2]), 2]
     
     # Read in test data
     test_subjects <- scan(paste(DATA_FOLDER, "test", "subject_test.txt", sep="/"))
     test_activities <- read_activities_file("test", activity_factors)
-    #test_obs <- read.table(paste(DATA_FOLDER, "test", "X_test.txt", sep="/"), 
-    #                        comment.char="", 
-    #                        colClasses="numeric", 
-    #                        nrows=NUM_TEST_OBS)
+    test_obs <- read.table(paste(DATA_FOLDER, "test", "X_test.txt", sep="/"), 
+                            comment.char="", 
+                            colClasses="numeric", 
+                            nrows=NUM_TEST_OBS)
+    
+    filtered_test_obs <- test_obs[, filtered_features]
     
     # Read in training data
     train_subjects <- scan(paste(DATA_FOLDER, "train", "subject_train.txt", sep="/"))
     train_activities <- read_activities_file("train", activity_factors)
-    #train_obs <- read.table(paste(DATA_FOLDER, "train", "X_train.txt", sep="/"), 
-    #                        comment.char="", 
-    #                        colClasses="numeric", 
-    #                        nrows=NUM_TRAIN_OBS)}
+    train_obs <- read.table(paste(DATA_FOLDER, "train", "X_train.txt", sep="/"), 
+                            comment.char="", 
+                            colClasses="numeric", 
+                            nrows=NUM_TRAIN_OBS)
 
-    tidy_data_frame <- data.frame(matrix(vector(), NUM_TEST_OBS + NUM_TRAIN_OBS, 2, dimnames=list(c(), c("subject", "activity"))), 
-                                   stringsAsFactors=FALSE)
-    tidy_data_frame[, 1] <- c(test_subjects, train_subjects)
-    tidy_data_frame[, 2] <- c(test_activities, train_activities)
-    
-    print(tidy_data_frame)
+    filtered_train_obs <- train_obs[, filtered_features]
 
+    tidy_data_frame <- rbind(filtered_test_obs, filtered_train_obs)
+    tidy_data_frame <- cbind(c(test_subjects, train_subjects), c(test_activities, train_activities), tidy_data_frame)
+    colnames(tidy_data_frame) <- c("subject", "activity", filtered_features)
+
+    write.table(tidy_data_frame, file = "tidy_data.csv", sep = ",")
 }
 
 # Checks for the presence of the data folder or the zipped version of
