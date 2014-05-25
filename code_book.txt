@@ -1,7 +1,6 @@
 The original data and description of collection methods can be found here:
      http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
-
 In summary, the data set is a collection of measurements from the accelerometer and gyroscope of
 a mobile device while subjects were performing certain activities. The final format for this modified
 data set is the mean of each of the calculated means/standard deviations for each measurement in the
