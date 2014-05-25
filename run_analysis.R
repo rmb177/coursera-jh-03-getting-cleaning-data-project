@@ -110,7 +110,6 @@ standardize_column_names <- function(col_names)
     
     # other substitutions
     col_names <- gsub("Acc", "Acceleration", col_names)
-    col_names <- gsub("Freq", "Frequency", col_names)
     col_names <- gsub("BodyBody", "Body", col_names)
     col_names <- gsub("Mag", "Magnitude", col_names)
     
