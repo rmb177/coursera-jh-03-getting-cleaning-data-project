@@ -1,0 +1,172 @@
+The original data and description of collection methods can be found here:
+     http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+
+In summary, the data set is a collection of measurements from the accelerometer and gyroscope of
+a mobile device while subjects were performing certain activities. The final format for this modified
+data set is the mean of each of the calculated means/standard deviations for each measurement in the
+original data set. The means are calculated over a grouping of each subject/activity pair.
+                                                                                
+                            CODEBOOK FOR MEANS OF SUBJECT/ACTIVITY MEASUREMENTS                
+                                                                                
+                                                                                
+                                                                                
+VARIABLE NAME                                   POSITION        VARIABLE                                VALUES OR                 
+                                                                                                        EXPLANATION               
+
+subject                                          1              id of subject
+activity                                         2              activity performed by the subject       LAYING
+                                                                                                        SITTING
+                                                                                                        STANDING
+                                                                                                        WALKING
+                                                                                                        WALKING_DOWNSTAIRS
+                                                                                                        WALKING_UPSTAIRS
+meanTimeBodyAccelerationMeanX                    3
+meanTimeBodyAccelerationMeanY	                 4
+meanTimeBodyAccelerationMeanZ	                 5
+meanTimeBodyAccelerationStdX	                 6
+meanTimeBodyAccelerationStdY	                 7
+meanTimeBodyAccelerationStdZ	                 8
+meanTimeGravityAccelerationMeanX	             9
+meanTimeGravityAccelerationMeanY	            10
+meanTimeGravityAccelerationMeanZ	            11
+meanTimeGravityAccelerationStdX	                12
+meanTimeGravityAccelerationStdY	                13
+meanTimeGravityAccelerationStdZ	                14
+meanTimeBodyAccelerationJerkMeanX	            15
+meanTimeBodyAccelerationJerkMeanY	            16
+meanTimeBodyAccelerationJerkMeanZ	            17
+meanTimeBodyAccelerationJerkStdX	            18
+meanTimeBodyAccelerationJerkStdY	            19
+meanTimeBodyAccelerationJerkStdZ	            20
+meanTimeBodyGyroMeanX	                        21
+meanTimeBodyGyroMeanY	                        22
+meanTimeBodyGyroMeanZ	                        23
+meanTimeBodyGyroStdX	                        24
+meanTimeBodyGyroStdY	                        25
+meanTimeBodyGyroStdZ	                        26
+meanTimeBodyGyroJerkMeanX	                    27
+meanTimeBodyGyroJerkMeanY	                    28
+meanTimeBodyGyroJerkMeanZ	                    29
+meanTimeBodyGyroJerkStdX	                    30
+meanTimeBodyGyroJerkStdY	                    31
+meanTimeBodyGyroJerkStdZ	                    32
+meanTimeBodyAccelerationMagnitudeMean           33
+meanTimeBodyAccelerationMagnitudeStd	        34
+meanTimeGravityAccelerationMagnitudeMean	    35
+meanTimeGravityAccelerationMagnitudeStd	        36
+meanTimeBodyAccelerationJerkMagnitudeMean       37
+meanTimeBodyAccelerationJerkMagnitudeStd	    38
+meanTimeBodyGyroMagnitudeMean	                39
+meanTimeBodyGyroMagnitudeStd	                40
+meanTimeBodyGyroJerkMagnitudeMean	            41
+meanTimeBodyGyroJerkMagnitudeStd	            42
+meanFrequencyBodyAccelerationMeanX	            43
+meanFrequencyBodyAccelerationMeanY	            44
+meanFrequencyBodyAccelerationMeanZ	            45
+meanFrequencyBodyAccelerationStdX               46
+meanFrequencyBodyAccelerationStdY	            47
+meanFrequencyBodyAccelerationStdZ	            48
+meanFrequencyBodyAccelerationJerkMeanX	        49
+meanFrequencyBodyAccelerationJerkMeanY	        50
+meanFrequencyBodyAccelerationJerkMeanZ	        51
+meanFrequencyBodyAccelerationJerkStdX	        52
+meanFrequencyBodyAccelerationJerkStdY	        53
+meanFrequencyBodyAccelerationJerkStdZ	        54
+meanFrequencyBodyGyroMeanX	                    55
+meanFrequencyBodyGyroMeanY	                    56
+meanFrequencyBodyGyroMeanZ	                    57
+meanFrequencyBodyGyroStdX	                    58
+meanFrequencyBodyGyroStdY                       59
+meanFrequencyBodyGyroStdZ	                    60
+meanFrequencyBodyAccelerationMagnitudeMean      61
+meanFrequencyBodyAccelerationMagnitudeStd	    62
+meanFrequencyBodyAccelerationJerkMagnitudeMean  63
+meanFrequencyBodyAccelerationJerkMagnitudeStd	64
+meanFrequencyBodyGyroMagnitudeMean	            65
+meanFrequencyBodyGyroMagnitudeStd	            66
+meanFrequencyBodyGyroJerkMagnitudeMean	        67
+meanFrequencyBodyGyroJerkMagnitudeStd           68
+
+
+    			
+==========================================================================
+Feature Mapping Table: Old Feature Names -> New Feature Names
+==========================================================================
+
+Substitutions:
+t = time
+f = frequency
+Acc = Acceleration
+BodyBody = Body
+Mag = Magnitude
+
+
+Original Name                     New Name
+--------------------------------------------------------------------------
+tBodyAcc-mean()-X               | meanTimeBodyAccelerationMeanX
+tBodyAcc-mean()-Y               | meanTimeBodyAccelerationMeanY
+tBodyAcc-mean()-Z               | meanTimeBodyAccelerationMeanZ
+tBodyAcc-std()-X                | meanTimeBodyAccelerationStdX
+tBodyAcc-std()-Y                | meanTimeBodyAccelerationStdY
+tBodyAcc-std()-Z                | meanTimeBodyAccelerationStdZ
+tGravityAcc-mean()-X            | meanTimeGravityAccelerationMeanX
+tGravityAcc-mean()-Y            | meanTimeGravityAccelerationMeanY
+tGravityAcc-mean()-Z            | meanTimeGravityAccelerationMeanZ
+tGravityAcc-std()-X             | meanTimeGravityAccelerationStdX
+tGravityAcc-std()-Y             | meanTimeGravityAccelerationStdY
+tGravityAcc-std()-Z             | meanTimeGravityAccelerationStdZ
+tBodyAccJerk-mean()-X           | meanTimeBodyAccelerationJerkMeanX
+tBodyAccJerk-mean()-Y           | meanTimeBodyAccelerationJerkMeanY
+tBodyAccJerk-mean()-Z           | meanTimeBodyAccelerationJerkMeanZ
+tBodyAccJerk-std()-X            | meanTimeBodyAccelerationJerkStdX
+tBodyAccJerk-std()-Y            | meanTimeBodyAccelerationJerkStdY
+tBodyAccJerk-std()-Z            | meanTimeBodyAccelerationJerkStdZ
+tBodyGyro-mean()-X              | meanTimeBodyGyroMeanX
+tBodyGyro-mean()-Y              | meanTimeBodyGyroMeanY
+tBodyGyro-mean()-Z              | meanTimeBodyGyroMeanZ
+tBodyGyro-std()-X               | meanTimeBodyGyroStdX
+tBodyGyro-std()-Y               | meanTimeBodyGyroStdY
+tBodyGyro-std()-Z               | meanTimeBodyGyroStdZ
+tBodyGyroJerk-mean()-X          | meanTimeBodyGyroJerkMeanX
+tBodyGyroJerk-mean()-Y          | meanTimeBodyGyroJerkMeanY
+tBodyGyroJerk-mean()-Z          | meanTimeBodyGyroJerkMeanZ
+tBodyGyroJerk-std()-X           | meanTimeBodyGyroJerkStdX
+tBodyGyroJerk-std()-Y           | meanTimeBodyGyroJerkStdY
+tBodyGyroJerk-std()-Z           | meanTimeBodyGyroJerkStdZ
+tBodyAccMag-mean()              | meanTimeBodyAccelerationMagnitudeMean
+tBodyAccMag-std()               | meanTimeBodyAccelerationMagnitudeStd
+tGravityAccMag-mean()           | meanTimeGravityAccelerationMagnitudeMean
+tGravityAccMag-std()            | meanTimeGravityAccelerationMagnitudeStd
+tBodyAccJerkMag-mean()          | meanTimeBodyAccelerationJerkMagnitudeMean
+tBodyAccJerkMag-std()           | meanTimeBodyAccelerationJerkMagnitudeStd
+tBodyGyroMag-mean()             | meanTimeBodyGyroMagnitudeMean
+tBodyGyroMag-std()              | meanTimeBodyGyroMagnitudeStd
+tBodyGyroJerkMag-mean()         | meanTimeBodyGyroJerkMagnitudeMean
+tBodyGyroJerkMag-std()          | meanTimeBodyGyroJerkMagnitudeStd
+fBodyAcc-mean()-X               | meanFrequencyBodyAccelerationMeanX
+fBodyAcc-mean()-Y               | meanFrequencyBodyAccelerationMeanY
+fBodyAcc-mean()-Z               | meanFrequencyBodyAccelerationMeanZ
+fBodyAcc-std()-X                | meanFrequencyBodyAccelerationStdX
+fBodyAcc-std()-Y                | meanFrequencyBodyAccelerationStdY
+fBodyAcc-std()-Z                | meanFrequencyBodyAccelerationStdZ
+fBodyAccJerk-mean()-X           | meanFrequencyBodyAccelerationJerkMeanX
+fBodyAccJerk-mean()-Y           | meanFrequencyBodyAccelerationJerkMeanY
+fBodyAccJerk-mean()-Z           | meanFrequencyBodyAccelerationJerkMeanZ
+fBodyAccJerk-std()-X            | meanFrequencyBodyAccelerationJerkStdX
+fBodyAccJerk-std()-Y            | meanFrequencyBodyAccelerationJerkStdY
+fBodyAccJerk-std()-Z            | meanFrequencyBodyAccelerationJerkStdZ
+fBodyGyro-mean()-X              | meanFrequencyBodyGyroMeanX
+fBodyGyro-mean()-Y              | meanFrequencyBodyGyroMeanY
+fBodyGyro-mean()-Z              | meanFrequencyBodyGyroMeanZ
+fBodyGyro-std()-X               | meanFrequencyBodyGyroStdX
+fBodyGyro-std()-Y               | meanFrequencyBodyGyroStdY
+fBodyGyro-std()-Z               | meanFrequencyBodyGyroStdZ
+fBodyAccMag-mean()              | meanFrequencyBodyAccelerationMagnitudeMean
+fBodyAccMag-std()               | meanFrequencyBodyAccelerationMagnitudeStd
+fBodyBodyAccJerkMag-mean()      | meanFrequencyBodyAccelerationJerkMagnitudeMean
+fBodyBodyAccJerkMag-std()       | meanFrequencyBodyAccelerationJerkMagnitudeStd
+fBodyBodyGyroMag-mean()         | meanFrequencyBodyGyroMagnitudeMean
+fBodyBodyGyroMag-std()          | meanFrequencyBodyGyroMagnitudeStd
+fBodyBodyGyroJerkMag-mean()     | meanFrequencyBodyGyroJerkMagnitudeMean
+fBodyBodyGyroJerkMag-std()      | meanFrequencyBodyGyroJerkMagnitudeStd
+
