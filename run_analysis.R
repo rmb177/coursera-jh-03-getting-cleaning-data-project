@@ -1,5 +1,6 @@
 library(reshape2)
 
+
 DATA_FOLDER <- "./UCI HAR Dataset"
 NUM_TEST_OBS <- 2947
 NUM_TRAIN_OBS <- 7352
