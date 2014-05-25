@@ -89,7 +89,9 @@ read_activities_file <- function(base_dir, factors)
 
 
 # Standardize column names to conform to some of the suggestions
-# made in class
+# made in class. Also prepend mean to the column name as our
+# final output will be the averages of all of the data for each
+# subject/activitiy combination.
 standardize_column_names <- function(col_names)
 {
     # replace starting t's with time
@@ -111,6 +113,9 @@ standardize_column_names <- function(col_names)
     col_names <- gsub("Freq", "Frequency", col_names)
     col_names <- gsub("BodyBody", "Body", col_names)
     col_names <- gsub("Mag", "Magnitude", col_names)
+    
+    # Add mean to start of column name as our final output is the average of each subject/activity pair
+    col_names = paste("mean", toupper(substring(col_names, 1, 1)), substring(col_names, 2), sep = "")
     
     return (col_names)
 }
